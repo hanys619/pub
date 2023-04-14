@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>서울시교육플랫폼</title>
+  <!-- font CSS -->
+  <link rel="stylesheet" href="../font/openSans/openSans.css">
+  <!-- select CSS -->
+  <link rel="stylesheet" href="../css/nice-select.css">
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+<form action="">
+<!-- wrap -->
+<div class="wrap">
+
+  <!-- lnb -->
+  <div class="lnb_area">
+    <ul class="menu1">
+      <li class="on"><a href="#" class="m1"><span class="hide">화상</span></a></li>
+      <li class=""><a href="#" class="m2"><span class="hide">화면공유</span></a></li>
+      <li class="disable"><a href="#" class="m3"><span class="hide">화이트보드</span></a></li>
+    </ul>
+
+    <ul class="menu2">
+      <li class="on"><a href="#" class="m1"><span class="hide">비디오</span></a></li>
+      <li class=""><a href="#" class="m2"><span class="hide">마이크</span></a></li>
+      <li class="disable"><a href="#" class="m3"><span class="hide">오디오</span></a></li>
+    </ul>
+
+    <ul class="menu3">
+      <li><a href="#" class="m1"><span class="hide">코드복사</span></a></li>
+      <li><a href="#" class="m2"><span class="hide">설정</span></a></li>
+    </ul>
+
+    <a href="#" class="btn_exit"><span class="hide">종료</span></a>
+  </div>
+  <!-- //lnb -->
+
+  <!-- wrap_snb -->
+  <div class="wrap_snb">
+    <div class="snb_area m_defult"> <!-- 접힘시 m_type2 클래스 제어 -->
+      <button type="button" class="btn_toggle new">메뉴열기/닫기</button> <!-- 알림 도착시 'new' 추가  -->
+      <div class="tab_area">
+        <ul class="tab_menu">
+          <li class="on">
+            <a href="#" class="">채팅</a>
+          </li>
+          <li>
+            <a href="#" class="">참여자 (<span>3</span>)</a>
+          </li>
+        </ul>
+
+        <div class="tab_cont">
+          <!-- 채팅 -->
+          <div class="cont1">
+            <div class="chat_box">
+              <div class="chat_item">
+                <div class="item">
+                  <div class="user_1">
+                    <em class="name">유재석</em>
+                    <span class="time">2022.12.12 오후 4:11</span>
+                    <p class="msg">111 안녕하세요?</p>
+                  </div>
+      
+                  <div class="user_1">
+                    <p class="msg">반갑습니다.</p>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="user_1">
+                    <em class="name">조세호</em>
+                    <span class="time">2022.12.12 오후 4:15</span>
+                    <p class="msg">안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</p>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="user_2">
+                    <span class="time">2022.12.12 오후 4:15</span>
+                    <p class="msg">오랜만입니다. 오랜만입니다.</p>
+                  </div>
+      
+                  <div class="user_2">
+                    <p class="msg">안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</p>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="user_1">
+                    <em class="name">송은이</em>
+                    <span class="time">2022.12.12 오후 4:11</span>
+                    <p class="msg">안녕하세요?</p>
+                  </div>
+      
+                  <div class="user_1">
+                    <p class="msg">반갑습니다.</p>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="user_1">
+                    <em class="name">김숙</em>
+                    <span class="time">2022.12.12 오후 4:15</span>
+                    <p class="msg">안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</p>
+                  </div>
+                </div>
+      
+                <div class="item">
+                  <div class="user_2">
+                    <span class="time">2022.12.12 오후 4:15</span>
+                    <p class="msg">오랜만입니다.</p>
+                  </div>
+      
+                  <div class="user_2">
+                    <p class="msg">안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 last</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="inp_box">
+              <div class="inner">
+                <textarea name="name" rows="1" cols="30" placeholder="내용을 입력하세요."></textarea>
+                <button type="submit" class="btn_send">전송</button>
+              </div>
+            </div>
+          </div>
+          <!-- //채팅 -->
+
+          <!-- 참여자 -->
+          <div class="cont2">
+            <div class="meeting_member">
+              <ul class="member_list">
+                <li>
+                  <div class="name own"> <!-- 나 일 경우 own 클래스 추가 -->
+                    <span class="ellipsis">공효진</span>
+                    <span class="role">(나)</span>
+                  </div>
+                </li>
+                <li>
+                <div class="name">
+                    <span class="ellipsis">정국</span>
+                    <span class="role">(호스트)</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic"></button>
+                    <button type="button" class="camera on"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">손나은</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">장범준</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">김종완</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">이서준</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">이서진</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">김태형</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">지민</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">김윤아</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">송중기</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">송혜교</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">현빈</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">손예진</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">김소영</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">오상진</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">정유미</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">박모건</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+                <li>
+                  <div class="name">
+                    <span class="ellipsis">손석구손석구손석구손석구손석구손석구손석구</span>
+                  </div>
+                  <div class="controls">
+                    <button type="button" class="mic on"></button>
+                    <button type="button" class="camera"></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- //참여자 -->
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <!-- //wrap_snb -->
+
+  <!-- wrap_content -->
+  <div class="wrap_content">
+    <div class="btn_time">00:00:00</div>
+
+    <div class="pop_msg" style="display:none;">
+      <p class="txt">초대 코드를 복사하였습니다.</p>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <div class="video_area no_camera"> <!-- 카메라 꺼짐표시 no_camera 클래스 추가 -->
+        <div class="inner">
+          <div class="video">
+            <img src="../img/thumb.png" width="100%" height="100%" alt="">
+          </div>
+          <span class="txt_name">김서율</span>            
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="inner_box">
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+            <span class="txt_name txt_me">김서진</span> <!-- 본인 표시 txt_me 클래스 추가 -->
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="inner_box on">
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+          </div>
+          <span class="txt_name">이서준</span>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="inner_box no_camera"> <!-- 카메라 꺼짐표시 no_camera 클래스 추가 -->
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+          </div>
+          <span class="txt_name">이서준</span>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="inner_box">
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="inner_box">
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="inner_box">
+            <div class="video">
+              <img src="../img/thumb.png" width="100%" height="100%" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  <!-- //wrap_content -->
+</div>
+<!--//wrap -->
+</form>
+
+<!-- jquery JS -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<!-- select JS -->
+<script src="../js/jquery.nice-select.min.js"></script>
+<!-- scrollbar JS -->
+<script src="../js/jquery.scrollbar.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- common JS -->
+<script src="../js/common.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  $(document).ready(function(){
+    /* swiper */
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      freeMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesOffsetBefore : 24,
+      slidesOffsetAfter : 24
+    });
+  });
+</script>
+</body>
+</html>
