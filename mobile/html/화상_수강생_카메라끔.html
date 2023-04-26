@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
 <title>서울시교육플랫폼</title>
+<!-- select CSS -->
+<link rel="stylesheet" href="../css/nice-select.css">
+<!-- common CSS -->
 <link href="../css/common.css" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +15,9 @@
 	<div class="page_room">
 		<div class="header">
 			<div class="left">
-				<a href="#" class="btn_exit"><span class="hide">종료</span></a>
+				<a href="#" class="btn_exit btn_pop_exit"> <!-- 나가기 팝업 btn_pop_exit 클래스 추가 -->
+					<span class="hide">종료</span>
+				</a>
 			</div>
 			<div class="tit">
 				<div class="box_clock">
@@ -65,7 +70,7 @@
 			<button type="button" class="chat"></button>
 			<button type="button" class="member"></button>
 			<button type="button" class="codecopy"></button>
-			<button type="button" class="exit"></button>
+			<button type="button" class="set"></button>
 		</div>
 	</div>
 
@@ -340,6 +345,110 @@
 	</div>
 	<!-- //참여자 -->
 
+	<!-- 설정 -->
+	<div class="page_set">
+		<div class="header">
+			<div class="left">
+				<button type="button" class="btn_close"></button>
+			</div>
+			<div class="tit">설정</div>
+		</div>
+
+		<div class="container">
+			<div class="tab_area">
+				<ul class="tab_menu">
+					<li class="on">
+						<a href="#" class="">대화명</a>
+					</li>
+					<li>
+						<a href="#" class="">장치</a>
+					</li>
+				</ul>
+
+				<div class="tab_cont">
+					<!-- 대화명 -->
+					<div class="cont1">
+						<label for="">채팅 대화명</label>
+						<span class="inp_area"><input type="text" class="inp_comm inp_m" placeholder="사용하실 대화명을 입력하세요. (2~10자)"></span>
+					</div>
+					<!-- //대화명 -->
+
+					<!-- 장치 -->
+					<div class="cont2">
+						<div class="video_area"> <!-- 카메라 꺼짐표시 no_camera 클래스 추가 -->
+							<div class="inner">
+								<div class="video">
+									<img src="../img/thumb.png" width="100%" height="100%" alt="">
+								</div>
+							</div>
+						</div>
+
+						<div class="select_area select_m select_camera">
+							<label for="camera">카메라</label>
+							<select name="" id="camera">
+								<option value="">720P HD CAMERA 720P HD CAMERA 720P HD CAMERA 720P HD CAMERA</option>
+								<option value="">720P HD CAMERA222</option>
+								<option value="">720P HD CAMERA333</option>
+							</select>
+						</div>
+
+						<div class="select_area select_m select_mic">
+							<label for="mic">마이크</label>
+							<select name="" id="mic">
+								<option value="">mic111mic111b mic111mic111mic111mi c111mic111mic111m ic111mic111</option>
+								<option value="">mic222</option>
+							</select>
+						</div>
+
+						<div class="select_area select_m select_mic">
+							<label for="mic">마이크</label>
+							<select name="" id="mic">
+								<option value="">mic111mic111b mic111mic111mic111mi c111mic111mic111m ic111mic111</option>
+								<option value="">mic222</option>
+							</select>
+						</div>
+
+					</div>
+					<!-- //장치 -->
+				</div>
+			</div>
+
+			<div class="btn_area">
+				<a href="#" class="btn_comm btn_m btn_gray">취소</a>
+				<a href="#" class="btn_comm btn_m btn_confirm">확인</a>
+			</div>
+		</div>
+	</div>
+	<!-- //설정 -->
+
+	<!-- 나가기 모달 팝업 -->
+	<div class="modal modal_exit">
+		<div class="modal_backdrop"></div>
+		<div class="modal_dialog">
+			<div class="modal_content">
+				<div class="modal_header">
+					<a href="#" class="btn_close"></a>
+				</div>
+
+				<div class="modal_container">
+					<div class="txt_area">
+						<p>
+							회의실에서 나가시겠습니까?
+							<br><br>
+							나갈 경우 해당 시간으로 기록되므로 진행시간을 체크해보시기 바랍니다.
+						</p>
+					</div>
+
+					<div class="btn_area">
+						<a href="#" class="btn_comm btn_m btn_gray">취소</a>
+						<a href="#" class="btn_comm btn_m btn_red">나가기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //나가기 모달 팝업 -->
+
 	<!-- 초대코드 복사 토스트 메세지 -->
 	<div class="pop_msg" style="display:none;">
 		<p class="txt">초대 코드를 복사하였습니다.</p>
@@ -347,7 +456,11 @@
 	<!-- //초대코드 복사 토스트 메세지 -->
 </div>
 
+<!-- jquery JS -->
 <script src="../js/jquery-1.12.4.min.js"></script>
+<!-- select JS -->
+<script src="../js/jquery.nice-select.min.js"></script>
+<!-- common JS -->
 <script src="../js/common.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -361,6 +474,12 @@
 		/* 참여자 기능 사용여부 토글 */
 		toggleBtn('.member_list .mic');
 		toggleBtn('.member_list .camera');
+
+		/* 나가기 모달 팝업 */
+		$('.btn_pop_exit').click( function(e){
+			e.preventDefault();
+      modalOpen('.modal_exit', 'middle'); /* ( 이름, 위치 ) */
+    });
 	});
 </script>
 
