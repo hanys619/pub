@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<title>서울시교육플랫폼</title>
+<!-- select CSS -->
+<link rel="stylesheet" href="../css/nice-select.css">
+<!-- common CSS -->
+<link href="../css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrap hold">
+
+		<!-- content -->
+    <div class="content">
+      <form action="#">
+        <legend></legend>
+        <fieldset>
+          <div class="box_hold">
+            <div class="video_area"> <!-- 카메라 꺼짐표시 no_camera 클래스 추가 -->
+              <div class="inner">
+                <div class="video">
+                  <img src="../img/thumb.png" width="100%" height="100%" alt="">
+                </div>
+              </div>
+            </div>
+  
+            <div class="select_area select_m select_camera">
+              <label for="camera">카메라</label>
+              <select name="" id="camera">
+                <option value="">720P HD CAMERA 720P HD CAMERA 720P HD CAMERA 720P HD CAMERA</option>
+                <option value="">720P HD CAMERA222</option>
+                <option value="">720P HD CAMERA333</option>
+              </select>
+            </div>
+            
+            <div class="select_area select_m select_mic">
+              <label for="mic">마이크</label>
+              <select name="" id="mic">
+                <option value="">mic111mic111b mic111mic111mic111mi c111mic111mic111m ic111mic111</option>
+                <option value="">mic222</option>
+              </select>
+            </div>
+            
+            <div class="select_area select_m select_speaker">
+              <label for="speaker">스피커</label>
+              <select name="" id="speaker" disabled> <!-- 비활성 상태일때 disabled 속성 추가 -->
+                <option value="">스피커 설정 불가</option>
+              </select>
+            </div>
+          </div>
+          <a href="#" class="btn_comm btn_l btn_confirm btn_pop_start">회의 시작</a> <!-- 팝업호출 btn_pop_start 클래스 -->
+        </fieldset>
+      </form>
+    </div>
+    <!-- //content -->
+</div>
+
+<!-- 스피커가 없는 경우 모달 팝업 -->
+<div class="modal modal_start">
+  <div class="modal_backdrop"></div>
+  <div class="modal_dialog">
+    <div class="modal_content">
+      <div class="modal_header">
+        <div class="tit"></div>
+        <a href="#" class="btn_close"></a>
+      </div>
+
+      <div class="modal_container">
+        <div class="txt_area">
+          <p>
+            스피커가 없는 경우 화상 회의 시 음성이 들리지 않습니다.
+            <br><br>
+            계속 화상회의를 진행하시겠습니까?
+          </p>
+        </div>
+
+        <div class="btn_area">
+          <a href="#" class="btn_comm btn_m btn_gray">취소</a>
+          <a href="#" class="btn_comm btn_m btn_confirm">확인</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //스피커가 없는 경우 모달 팝업 -->
+
+<!-- jquery JS -->
+<script src="../js/jquery-1.12.4.min.js"></script>
+<!-- select JS -->
+<script src="../js/jquery.nice-select.min.js"></script>
+<!-- common JS -->
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).resize();
+    if ($('.wrap').hasClass('hold') === true){
+      $('body').css('background-color','#fff');
+    };
+    /* selectbox */
+    $('select:not(.ignore)').niceSelect();
+
+		$('.code .inp_comm').focus(function(e){
+      e.preventDefault();
+      $('.code').addClass('on');
+    });
+    $('.code .inp_comm').focusout(function(e){
+      e.preventDefault();
+      $('.code').removeClass('on');
+    });
+    /* 회의 시작 모달 팝업 */
+    $('.btn_pop_start').click(function(e){
+      e.preventDefault();
+      modalOpen('.modal_start', 'middle'); /* ( 이름, 위치 ) */
+    });
+	});
+</script>
+
+</body>
+</html>

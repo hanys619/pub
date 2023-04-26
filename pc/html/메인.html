@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>서울시교육플랫폼</title>
+  <!-- common CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+
+<body>
+<form action="">
+<!-- wrap -->
+<div class="wrap main">
+
+  <!-- wrap_content -->
+  <div class="wrap_content">
+
+    <!-- content -->
+    <div class="content">
+      <div class="service_area"> <!-- 코드 입력 오류시 error 클래스 추가 -->
+        <h1 class="tit">서울시 화상 서비스를 이용해 보세요.</h1>
+        <div class="item_box">
+          <div class="code">
+            <span class="inp_area"><input type="text" class="inp_comm inp_l" placeholder="회의실 코드를 입력해주세요"></span>
+            <a href="#" class="btn_comm btn_l btn_gray">입장하기</a>
+          </div>
+          <a href="#" class="btn_comm btn_l btn_confirm">방만들기</a>
+        </div>
+        <p class="txt_error">일치하는 회의실 코드가 없습니다.</p>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+  <!-- //wrap_content -->
+</div>
+<!--//wrap -->
+</form>
+
+<!-- jquery JS -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<!-- common JS -->
+<script src="../js/common.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  $(document).ready(function(){
+    $('.code .inp_comm').focus(function(e){
+      e.preventDefault();
+      $('.code').addClass('on');
+    });
+    $('.code .inp_comm').focusout(function(e){
+      e.preventDefault();
+      $('.code').removeClass('on');
+    });
+  });
+</script>
+</body>
+</html>
