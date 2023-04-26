@@ -85,14 +85,24 @@ $(document).ready(function(){
 	});
 
 	/* 탭메뉴 */
-	var tabNav = $('.tab_menu li');
+	var tabNav = $('.wrap_snb .tab_menu li');
 	$(tabNav).click(function(){
 		var tabView = $(tabNav).index(this);
-		$('.tab_menu li').removeClass('on');
+		$('.wrap_snb .tab_menu li').removeClass('on');
 		$(this).addClass('on');
-		$('.tab_cont>div').hide();
-		$('.tab_cont>div').eq(tabView).show();
+		$('.wrap_snb .tab_cont>div').hide();
+		$('.wrap_snb .tab_cont>div').eq(tabView).show();
 	});
+
+	var tabNav2 = $('.modal .tab_menu li');
+	$(tabNav2).click(function(){
+		var tabView = $(tabNav2).index(this);
+		$('.modal .tab_menu li').removeClass('on');
+		$(this).addClass('on');
+		$('.modal .tab_cont>div').hide();
+		$('.modal .tab_cont>div').eq(tabView).show();
+	});
+	
 });
 
 /* 팝업 열기 */
