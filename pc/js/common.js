@@ -1,6 +1,9 @@
 $(document).ready(function(){
   /* contents size */
 	$('.content').css('height', $(window).height() - $('.mySwiper').height() - 144 + 'px'); //content padding + slide margin top(20px)
+	if ($('.wrap').hasClass('white_board')){
+		$('html').css('overflow', 'hidden');
+	};
 	var onResize = function(target) {
 		$(document).ready(function(){
 			$(target).css('height', $(window).height());
@@ -14,6 +17,9 @@ $(document).ready(function(){
 	/* resize */
   $(window).on('resize', function(){
 		$('.content').css('height', $(window).height() - $('.mySwiper').height() - 144 + 'px'); //content padding + slide margin top(20px)
+		if ($('.wrap').hasClass('white_board')){
+			$('html').css('overflow', 'hidden');
+		};
 		var onResize = function(target) {
 			$(document).ready(function(){
 				$(target).css('height', $(window).height());
