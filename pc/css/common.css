@@ -94,7 +94,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .select_area .nice-select.open {border-color:#212529;}
 .select_area .nice-select.open .list {left:-1px;width:calc(100% + 2px);margin-top:8px;padding:8px 0;font-size:16px;line-height:60px;border:1px solid #dee2e6;box-shadow: 0 12px 24px 0 rgba(51, 61, 75, 0.16);}
 .select_area .nice-select.open .list li {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:60px;margin:0 8px;border-radius:8px;line-height:60px;}
-.select_area .nice-select.open .list li:first-child {display:none;}
+
 .select_area.select_camera .current:before {content:'';clear:both;display:inline-block;width:24px;height:24px;margin:17px 10px 0 0;vertical-align:top;background:url(../img/Icon_video2.svg) no-repeat 0 50%;background-size:24px 24px;}
 .select_area.select_mic .current:before {content:'';clear:both;display:inline-block;width:24px;height:24px;margin:17px 10px 0 0;vertical-align:top;background:url(../img/Icon_microphone2.svg) no-repeat 0 50%;background-size:24px 24px;}
 .select_area.select_speaker .current:before {content:'';clear:both;display:inline-block;width:24px;height:24px;margin:17px 10px 0 0;vertical-align:top;background:url(../img/Icon_volume-max2.svg) no-repeat 0 50%;background-size:24px 24px;}
