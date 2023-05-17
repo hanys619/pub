@@ -193,7 +193,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .snb_area.m_type2 .tab_area {overflow:hidden;position:relative;display:block;height:100%;}
 
 .snb_area .chat_box {overflow-x:hidden;overflow-y:scroll;height:calc(100vh - 88px);}
-.snb_area .chat_box .chat_item {padding:16px;}
+.snb_area .chat_box .chat_item {padding:16px 16px 50px 16px;}
 .snb_area .chat_box .chat_item:after {content:'';clear:both;display:block;}
 .snb_area .chat_box .chat_item .item {margin-bottom:16px;}
 .snb_area .chat_box .chat_item .item:after {content:'';clear:both;display:block;}

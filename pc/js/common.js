@@ -46,6 +46,8 @@ $(document).ready(function(){
 
 	$('.snb_area .btn_toggle').click(function(){
 		$('.snb_area').removeClass('m_defult').toggleClass('m_type2');
+		/* 채팅 하단으로 이동 */
+		$('.chat_box').animate({scrollTop : $('.chat_item').height() - $('.chat_box').height()}, 1);
 	});
 
 	/* 초대코드 복사 */
