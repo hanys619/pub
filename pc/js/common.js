@@ -42,8 +42,22 @@ $(document).ready(function(){
 		});
 	};
 	inputTextFocus('.inp_area');
-	/* snb */
 
+	/* lnb */
+	$('.menu1 .m1').click(function(){
+		$('.wrap').removeClass('wrap_share');
+		$('.wrap').removeClass('white_board');
+	});
+	$('.menu1 .m2').click(function(){
+		$('.wrap').addClass('wrap_share');
+		$('.wrap').removeClass('white_board');
+	});
+	$('.menu1 .m3').click(function(){
+		$('.wrap').removeClass('wrap_share');
+		$('.wrap').addClass('white_board');
+	});
+
+	/* snb */
 	$('.snb_area .btn_toggle').click(function(){
 		$('.snb_area').removeClass('m_defult').toggleClass('m_type2');
 		/* 채팅 하단으로 이동 */

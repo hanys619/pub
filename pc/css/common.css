@@ -269,8 +269,8 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .wrap.hold .btn_confirm {display:block;width:416px;}
 
 /* 화면공유 */
-.wrap_share {}
-.wrap_share .content {height:calc(100vh - 120px);}
+.wrap_share .mySwiper {display:none;}
+.wrap_share .content {height:calc(100vh - 120px) !important;}
 .wrap_share .btn_etc {position:absolute;left:50%;margin:24px 0 0 -92px;}
 .wrap_share .btn_etc:before {content:'';clear:both;display:inline-block;width:24px;height:24px;margin:-3px 11px 0 0;vertical-align:middle;background:url(../img/Icon_monitor_x.svg) no-repeat 50% 50%;background-size:24px 24px;}
 
