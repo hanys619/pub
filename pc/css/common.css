@@ -128,6 +128,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .video_area .inner .video {overflow:hidden;width:100%;height:100%;border-radius:8px;background-color:#adb5bd;}
 /* lnb */
 .lnb_area {position:relative;float:left;width:80px;background-color:#2b2d3e;z-index:20;}
+.lnb_area:after {content:'';clear:both;display:block;position:absolute;bottom:0;width:80px;height:230px;background-color:#2b2d3e;}
 .lnb_area li {width:48px;height:48px;margin:0 auto 16px auto;border-radius:48px;}
 .lnb_area li a {display:block;width:48px;height:48px;border-radius:48px;text-align:center;}
 .lnb_area li.disable a {cursor:default;}
@@ -162,7 +163,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .lnb_area .menu2 li.disable .m3 {background:url('../img/icon_volume_inactive.svg') no-repeat 50% 50%;}
 .lnb_area .menu2 li.disable a {background-color:rgba(0, 0, 0, 0.15)!important;}
 
-.lnb_area .menu3 {position:absolute;left:50%;bottom:80px;width:48px;margin-left:-24px;}
+.lnb_area .menu3 {position:absolute;left:50%;bottom:80px;width:48px;margin-left:-24px;z-index:21;}
 .lnb_area .menu3 li .m1 {background:url('../img/icon_code_copy.svg') no-repeat 50% 50%;}
 .lnb_area .menu3 li .m2 {background:url('../img/icon_gear.svg') no-repeat 50% 50%;}
 .lnb_area .menu3 li .m1:hover {background:url('../img/icon_code_copy_hover.svg') no-repeat 50% 50%;}
@@ -171,7 +172,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .lnb_area .menu3 li .m1:active {background:#0c82e9 url('../img/icon_code_copy_active.svg') no-repeat 50% 50% !important;}
 .lnb_area .menu3 li .m2:active {background:#000 url('../img/icon_gear_active.svg') no-repeat 50% 50% !important;}
 
-.lnb_area .btn_exit {position:absolute;bottom:25px;left:50%;width:48px;height:48px;margin-left:-24px;border-radius:48px;background:url(../img/icon_exit.svg) no-repeat 50% 50%;}
+.lnb_area .btn_exit {position:absolute;bottom:25px;left:50%;width:48px;height:48px;margin-left:-24px;border-radius:48px;background:url(../img/icon_exit.svg) no-repeat 50% 50%;z-index:21;}
 .lnb_area .btn_exit:hover {background-color:rgba(0, 0, 0, 0.15)!important;}
 .lnb_area .btn_exit:active {background:#f8485e url(../img/icon_exit_active.svg) no-repeat 50% 50% !important;}
 
@@ -262,19 +263,19 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 /* 대기실 */
 .wrap.hold .wrap_content {margin-left:0;background-color:#fff;}
 .wrap.hold .content {display:flex;height:100%;align-items:center;justify-content:center; padding:0;}
-.wrap.hold .video_area {margin-bottom:32px;}
+.wrap.hold .video_area {float:left;width:480px;height:290px;margin-bottom:32px;}
 .wrap.hold .video_area .inner {padding-right:0;}
-.wrap.hold .box_hold {width:480px;margin-bottom:32px;}
-.wrap.hold .box_hold .tit {margin-bottom:24px;font-weight:bold;font-size:24px;line-height:32px;}
-.wrap.hold .btn_confirm {display:block;width:416px;}
+.wrap.hold .select_area {clear:right;float:right;width:480px;}
+.wrap.hold .box_hold {width:1000px;}
+.wrap.hold .box_hold:after {content:'';clear:both;display:block;}
+.wrap.hold .box_hold .tit {margin-bottom:56px;font-weight:bold;font-size:24px;line-height:32px;text-align:center;}
+.wrap.hold .btn_confirm {clear:both;float:right;display:block;width:416px;}
 
 /* 화면공유 */
 .wrap_share .mySwiper {display:none;}
 .wrap_share .content {height:calc(100vh - 120px) !important;}
 .wrap_share .btn_etc {position:absolute;left:50%;margin:24px 0 0 -92px;}
 .wrap_share .btn_etc:before {content:'';clear:both;display:inline-block;width:24px;height:24px;margin:-3px 11px 0 0;vertical-align:middle;background:url(../img/Icon_monitor_x.svg) no-repeat 50% 50%;background-size:24px 24px;}
-
-
 
 /* modal popup - 공통 */
 body.modal_show {overflow:hidden;}
