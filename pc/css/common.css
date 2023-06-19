@@ -301,6 +301,7 @@ body.modal_show {overflow:hidden;}
 
 /* modal - 설정 */
 .modal_set .modal_content {margin-top:50px;}
+.modal_set .modal_container {overflow-y:scroll;max-height:calc(100vh - 170px);}
 .modal_set label {display:block;margin-bottom:8px;font-size:14px;line-height:18px;}
 .modal_set .tab_cont {padding-bottom:0;}
 .modal_set .cont2 {display:none;}
