@@ -55,6 +55,10 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 ::-moz-placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 :-ms-input-placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .placeholder {color:rgba(0, 0, 0, 0.27) !important;}
+/* scrollbar */
+::-webkit-scrollbar {width:10px;}
+::-webkit-scrollbar-track {background-color:#e4e4e4;border-radius:100px;}
+::-webkit-scrollbar-thumb {background-color:#a2a2a2;border-radius:100px;}
 /* btn */
 .btn_area {padding-top:32px;text-align:center;}
 .btn_comm {display:inline-block;margin:0 2px;padding:0 32px;font-weight:500;text-align:center;border-radius:8px;white-space:nowrap;}
@@ -193,7 +197,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .snb_area.m_type2 .btn_toggle.new:after {display:none;}
 .snb_area.m_type2 .tab_area {overflow:hidden;position:relative;display:block;height:100%;}
 
-.snb_area .chat_box {overflow-x:hidden;overflow-y:scroll;height:calc(100vh - 88px);}
+.snb_area .chat_box {overflow-x:hidden;overflow-y:auto;height:calc(100vh - 88px);}
 .snb_area .chat_box .chat_item {padding:16px 16px 50px 16px;}
 .snb_area .chat_box .chat_item:after {content:'';clear:both;display:block;}
 .snb_area .chat_box .chat_item .item {margin-bottom:16px;}
@@ -213,7 +217,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .snb_area .tab_cont {height:100%;}
 
 /* 참여자 */
-.meeting_member {overflow-x:hidden;overflow-y:scroll;height:calc(100vh - 24px);}
+.meeting_member {overflow-x:hidden;overflow-y:auto;height:calc(100vh - 24px);}
 .meeting_member .member_list {padding:24px;}
 .meeting_member .member_list li {display:flex;padding:8px 0;}
 .meeting_member .member_list .name {display:flex;flex:1;overflow:hidden;padding:2px 10px 2px 12px;font-weight:500;font-size:14px;line-height:32px;color:#343a40;text-overflow:ellipsis;white-space:nowrap;}
@@ -287,7 +291,7 @@ body.modal_show {overflow:hidden;}
 .modal.slide_up.on .modal_dialog {transform:translate(0,0);}
 .modal.slide_down .modal_dialog {transform:translate(0,-100%);}
 .modal.slide_down.on .modal_dialog {transform:translate(0,0);}
-.modal .modal_content {border-radius:16px;background-color:#fff;}
+.modal .modal_content {overflow:hidden;border-radius:16px;background-color:#fff;}
 .modal .modal_container {padding-bottom:32px;}
 .modal .modal_header {position:relative;}
 .modal .modal_header .btn_close {position:absolute;top:0;right:0;width:56px;height:56px;}
@@ -301,7 +305,7 @@ body.modal_show {overflow:hidden;}
 
 /* modal - 설정 */
 .modal_set .modal_content {margin-top:50px;}
-.modal_set .modal_container {overflow-y:scroll;max-height:calc(100vh - 170px);}
+.modal_set .modal_container {overflow-y:auto;max-height:calc(100vh - 170px);}
 .modal_set label {display:block;margin-bottom:8px;font-size:14px;line-height:18px;}
 .modal_set .tab_cont {padding-bottom:0;}
 .modal_set .cont2 {display:none;}

@@ -6,7 +6,7 @@ $(document).ready(function(){
 	};
 	var onResize = function(target) {
 		$(document).ready(function(){
-			$(target).css('height', $(window).height());
+			$(target).css('height', $(window).height() - 1 + 'px'); //125% 배율 디바이스 소수점 대응(-1px)
 		});
 	}
 	onResize('.wrap');
@@ -22,7 +22,7 @@ $(document).ready(function(){
 		};
 		var onResize = function(target) {
 			$(document).ready(function(){
-				$(target).css('height', $(window).height());
+				$(target).css('height', $(window).height() - 1 + 'px'); //125% 배율 디바이스 소수점 대응(-1px)
 			});
 		}
 		onResize('.wrap');
