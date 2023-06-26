@@ -25,7 +25,7 @@ $(document).ready(function(){
 		};
 		var onResize = function(target) {
 			$(document).ready(function(){
-				$(target).css('height', $(window).height()); //125% 배율 디바이스 소수점 대응(-1px)
+				$(target).css('height', $(window).height());
 			});
 		}
 		onResize('.wrap');

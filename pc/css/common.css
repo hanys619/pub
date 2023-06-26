@@ -125,6 +125,10 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .wrap .txt_me {background-color:#000;}
 .wrap .no_camera img {display:none;}
 .content {padding:96px 0 24px 24px;}
+.footer {position:absolute;left:0;bottom:0;width:100%;height:120px;font-size:13px;line-height:18px;color:rgba(255, 255, 255, 0.4);background-color:#2b2d3e;}
+.footer .inner {display:flex;align-items:start;width:596px;padding:42px 0 0 200px;}
+.footer .logo {flex-direction:column;overflow:hidden;display:block;width:123px;height:16px;margin:2px 32px 0 0;font:0/0 arial;text-indent:-9999em;vertical-align:top;background:url(../img/logo.svg) no-repeat 50% 50%;background-size:123px 16px;}
+.footer .copyright {vertical-align:top;}
 .video_area {position:relative;height:100%;margin-bottom:24px;}
 .video_area.no_camera {overflow:hidden;}
 .video_area.no_camera:after {content:'';clear:both;display:block;position:absolute;left:50%;top:50%;width:200px;height:200px;margin:-100px 0 0 -112px;border-radius:100%;z-index:10;background:rgba(0, 0, 0, 0.2) url(../img/Icon_no_video.svg) no-repeat 50% 50%;background-size:100px 100px;}
@@ -247,9 +251,10 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .mySwiper .swiper-button-next {background:url(../img/Icon_chevron-right.svg) no-repeat 50% 50%;}
 
 /* main */
+.wrap.main {overflow:hidden;}
 .wrap.main .wrap_content {margin-left:0;background-color:#fff;}
 .wrap.main .content {display:flex;height:100%;align-items:center;padding:0;}
-.wrap.main .content:before {content:'';position:absolute;left:0;top:0;display:block;clear:both;width:100%;height:100%;background-image:url(../img/flower.svg), url(../img/triangle.svg), url(../img/rectangle.svg);background-repeat:no-repeat;background-position:415px -60px, 115px 114%, 100% 90%;background-size:240px 240px, 268px 291px, 146px 146px;}
+.wrap.main .content:before {content:'';position:absolute;left:0;top:0;display:block;clear:both;width:100%;height:100%;background-image:url(../img/flower.svg), url(../img/triangle.svg), url(../img/rectangle.svg);background-repeat:no-repeat;background-position:415px -60px, 115px 95%, 100% 75%;background-size:240px 240px, 268px 291px, 146px 146px;}
 .wrap.main .service_area {position:relative;min-height:440px;margin:0 auto;padding-right:604px;background:url(../img/main_visual1.svg) no-repeat 100% 50%;background-size:524px 440px;}
 .wrap.main .service_area .tit {margin:61px 0 24px 0;font-weight:600;font-size:36px;line-height:40px;letter-spacing:-0.72px;}
 .wrap.main .item_box {width:596px;height:60px;display:flex;justify-content:flex-start;align-items:flex-start;padding:0;}
