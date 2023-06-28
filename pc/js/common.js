@@ -4,18 +4,6 @@ $(document).ready(function(){
 	if ($('.wrap').hasClass('white_board')){
 		$('html').css('overflow', 'hidden');
 	};
-	var onResize = function(target) {
-		$(document).ready(function(){
-			$(target).css('height', $(window).height());
-			if ($(target).hasClass('main') || $(target).hasClass('hold')){
-				$(target).css('height', $(window).height() - 1 + 'px'); //125% 배율 디바이스 소수점 대응(-1px)
-			};
-		});
-	}
-	onResize('.wrap');
-	onResize('.wrap_content');
-	onResize('.lnb_area');
-	onResize('.snb_area');
 
 	/* resize */
   $(window).on('resize', function(){
@@ -23,15 +11,6 @@ $(document).ready(function(){
 		if ($('.wrap').hasClass('white_board')){
 			$('html').css('overflow', 'hidden');
 		};
-		var onResize = function(target) {
-			$(document).ready(function(){
-				$(target).css('height', $(window).height());
-			});
-		}
-		onResize('.wrap');
-		onResize('.wrap_content');
-		onResize('.lnb_area');
-		onResize('.snb_area');
   });
 
 	/* input text focus */
