@@ -184,7 +184,7 @@ a,button,input,textarea{-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .wrap.hold .box_hold {width:calc(100vw - 32px);margin:0 auto;padding-bottom:80px;}
 .wrap.hold .box_hold .video_area {padding:20px 0 24px 0;}
 .wrap.hold .box_hold .video_area .inner {height:100%;}
-.wrap.hold .btn_confirm {position:fixed;bottom:0;width:calc(100vw - 64px);margin-top:26px;border-radius:0;}
+.wrap.hold .btn_confirm {position:fixed;bottom:0;width:calc(100vw - 64px);margin:26px 0 0 0;border-radius:0;}
 
 .wrap.type_student .video_area {height:calc(100vh - 92px);}
 .wrap.type_student .video_area .inner {width:calc(100vw - 32px);}

@@ -51,8 +51,8 @@ var popControls = function(btn){
 popControls('.right .btn_toggle');
 
 /* 비활성 버튼 */
-$('.disable').click(function(){
-	preventDefault();
+$('.disable').click(function(e){
+	e.preventDefault();
 });
 
 /* 채팅 화면 열기 */
