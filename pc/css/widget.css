@@ -435,4 +435,5 @@ background-color: #dee2e6;
 .white_board .font_size {top:370px !important;}
 .white_board .font_size .nice-select {height:36px;margin-right:8px;line-height:34px;}
 .white_board .font_size .nice-select .option {min-height:36px;line-height:34px;}
-
+.white_board .mySwiper {display:none;}
+.white_board .content {height:calc(100vh - 120px) !important;}
