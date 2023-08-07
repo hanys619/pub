@@ -137,24 +137,24 @@ if ($('.modal').hasClass('on') === true) {
 	$('body').css('overflow', 'hidden');
 };
 
-	/* 탭메뉴 */
-	var tabNav = $('.page_set .tab_menu li');
-	$(tabNav).click(function(){
-		var tabView = $(tabNav).index(this);
-		$('.page_set .tab_menu li').removeClass('on');
-		$(this).addClass('on');
-		$('.page_set .tab_cont>div').hide();
-		$('.page_set .tab_cont>div').eq(tabView).show();
-	});
+/* 탭메뉴 */
+var tabNav = $('.page_set .tab_menu li');
+$(tabNav).click(function(){
+	var tabView = $(tabNav).index(this);
+	$('.page_set .tab_menu li').removeClass('on');
+	$(this).addClass('on');
+	$('.page_set .tab_cont>div').hide();
+	$('.page_set .tab_cont>div').eq(tabView).show();
+});
 
-	var tabNav2 = $('.modal .tab_menu li');
-	$(tabNav2).click(function(){
-		var tabView = $(tabNav2).index(this);
-		$('.modal .tab_menu li').removeClass('on');
-		$(this).addClass('on');
-		$('.modal .tab_cont>div').hide();
-		$('.modal .tab_cont>div').eq(tabView).show();
-	});
+var tabNav2 = $('.modal .tab_menu li');
+$(tabNav2).click(function(){
+	var tabView = $(tabNav2).index(this);
+	$('.modal .tab_menu li').removeClass('on');
+	$(this).addClass('on');
+	$('.modal .tab_cont>div').hide();
+	$('.modal .tab_cont>div').eq(tabView).show();
+});
 
 /* 팝업 열기 */
 var modalOpen = function(modal, posi){

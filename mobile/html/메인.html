@@ -24,6 +24,11 @@
 					<p class="txt_error">일치하는 코드가 없습니다.</p>
           <a href="#" class="btn_comm btn_m btn_confirm">방만들기</a>
         </div>
+
+        <div class="txt_desc">
+          <p>화상 서비스는 PC에 최적화 되어 있습니다.<br>PC로 접속 부탁드립니다.</p>
+          <a href="#" class="btn_pop_desc">권장사양 확인</a> <!-- 권장사항 팝업 btn_pop_desc 클래스 추가 -->
+        </div>
       </div>		
 
 			<div class="copyright">
@@ -32,9 +37,102 @@
 					© Seoul Metropolitan Government all rights reserved</p>
 			</div>
 		</div>
-
-
 </div>
+
+<!-- 권장사양 모달 팝업 -->
+<div class="modal modal_desc">
+  <div class="modal_backdrop"></div>
+  <div class="modal_dialog">
+    <div class="modal_content">
+      <div class="modal_header header_title">
+        <div class="tit">권장사양</div>
+        <a href="#" class="btn_close"></a>
+      </div>
+
+      <div class="modal_container">
+        <div class="txt_area">
+          <strong class="tit">PC</strong>
+          <table class="tbl_type1">
+            <colgroup>
+              <col width="100">
+              <col width="">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">CPU</th>
+                <td>I5 9세대 4core 2.4GHz 이상</td>
+              </tr>
+              <tr>
+                <th scope="row">RAM</th>
+                <td>8GB 이상</td>
+              </tr>
+              <tr>
+                <th scope="row">HDD</th>
+                <td>10GB 여유공간</td>
+              </tr>
+              <tr>
+                <th scope="row">Network</th>
+                <td>업로드 80Mbps 이상<br>다운로드 80 Mbps 이상</td>
+              </tr>
+              <tr>
+                <th scope="row">OS</th>
+                <td>Windows 11</td>
+              </tr>
+              <tr>
+                <th scope="row">출시 년도</th>
+                <td>2019년 이후</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <strong class="tit">Mobile</strong>
+          <table class="tbl_type1">
+            <colgroup>
+              <col width="100">
+              <col width="">
+              <col width="">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Android</th>
+                <th scope="col">iOS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">OS 버전</th>
+                <td>10.0 이상</td>
+                <td>15.0 이상</td>
+              </tr>
+              <tr>
+                <th scope="row">RAM</th>
+                <td>5GB 이상</td>
+                <td>5GB 이상</td>
+              </tr>
+              <tr>
+                <th scope="row">출시 년도</th>
+                <td>2019년 이후</td>
+                <td>2019년 이후</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="txt point_c">갤럭시 J4, J4+ 갤럭시 A31, 갤럭시 A32, 갤럭시 탭 A7 lite 외 갤럭시 A시리즈의 경우 
+            원활한 작동이 어려울 수 있습니다.</p>
+
+          <strong class="tit">인터넷 속도</strong>
+          <p class="txt">권장 네트워크 속도는 업로드 80Mbps, 다운로드 80Mbps 입니다.
+            <a href="#" class="link">https://speedcheck.org</a>에서 Start Test 버튼을 눌러 확인 가능합니다.</p>
+        </div>
+
+        <div class="btn_area">
+          <a href="#" class="btn_comm btn_m btn_gray btn_confirm">확인</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //권장사양 모달 팝업 -->
 
 <!-- jquery JS -->
 <script src="../js/jquery-1.12.4.min.js"></script>
@@ -52,6 +150,11 @@
     $('.code .inp_comm').focusout(function(e){
       e.preventDefault();
       $('.code').removeClass('on');
+    });
+    /* 권장사양 모달 팝업 */
+    $('.btn_pop_desc').click( function(e){
+      e.preventDefault();
+      modalOpen('.modal_desc', 'middle'); /* ( 이름, 위치 ) */
     });
 	});
 </script>

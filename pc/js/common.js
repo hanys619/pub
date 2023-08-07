@@ -52,8 +52,8 @@ $(document).ready(function(){
 		$('.pop_msg').fadeIn(400).delay(1000).fadeOut(400); //fade out after 4 seconds
 	});
 
-	$('.disable').click(function(){
-		preventDefault();
+	$('.disable').click(function(e){
+		e.preventDefault();
 	});
 
 	/* selectbox */
