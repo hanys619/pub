@@ -289,6 +289,7 @@ input::placeholder {color:rgba(0, 0, 0, 0.27) !important;}
 .wrap.hold .btn_confirm {clear:both;float:right;display:block;width:416px;}
 
 /* 화면공유 */
+.wrap_share .wrap_content {position:static;overflow:hidden;}
 .wrap_share .mySwiper {display:none;}
 .wrap_share .content {height:calc(100vh - 120px) !important;}
 .wrap_share .btn_etc {position:absolute;left:50%;margin:24px 0 0 -92px;}
