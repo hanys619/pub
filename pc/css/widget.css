@@ -422,7 +422,7 @@ background-color: #dee2e6;
 }
 
 /* 화이트보드 custom */
-.wrap_widget {overflow:hidden;height:100%;margin-right:24px;box-sizing:border-box;border:1px solid #dee2e6;border-radius:8px;background-color:#fff;}
+.wrap_widget {overflow:hidden;width:1280px;height:100%;margin:0 auto;box-sizing:border-box;border:1px solid #dee2e6;border-radius:8px;background-color:#fff;}
 .wrap_widget .tool-box {margin-top:96px;height:calc(100vh - 122px) !important;box-sizing:border-box;border:1px solid #dee2e6;border-radius:8px 0 0 8px;background-color:#dee2e6;}
 .white_board .wrap_content {position:static;overflow:hidden;}
 .white_board .btn_time {left:100px;}
